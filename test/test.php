@@ -1,0 +1,8 @@
+<?php
+	require_once "../config/imports.all.php";
+
+	$c = new Contact("Wender","91192046",new Address());
+	print_r($c);
+
+	DAOUser::create(new User("Pedro Martins","mt@gmail.com","123"));
+?>

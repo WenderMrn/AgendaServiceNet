@@ -15,6 +15,5 @@ abstract class  DAOContact implements IDAO{
 	public function refresh($obj){
 		
 	}
-
 }
 ?>
