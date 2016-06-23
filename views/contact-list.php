@@ -34,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.php" id="home">
+          <a class="navbar-brand" href="index.php" id="home">
             <!--<img alt="Home" src="#">-->
             Agenda
           </a>
@@ -43,7 +43,6 @@
        		<ul class="nav navbar-nav">
             <li class="active"><a href="#">Meus contatos</a></li>
 		        <li><a href="contact-insert.php">Adicionar Contato</a></li>
-		        <li><a href="#">Editar</a></li>
 		     </ul>
 			<form class="navbar-form navbar-right" role="search">
 			  <div class="form-group">
@@ -63,7 +62,9 @@
               require_once "../config/imports.all.php";
               $contacts = DAOContact::readAll();
               foreach ($contacts as $contact) {
-                echo "<a href='#' class='list-group-item'>";
+                echo "<form action='../controllers/contact.controller.php?operation=delete' method='POST'>";
+                echo "<input type='hidden' value=".$contact->getId()." name='id'>";
+                echo "<div class='list-group-item'>";
                 echo "<h4 class='list-group-item-heading'>Nome</h4>";
                 echo "<p class='list-group-item-text'>".$contact->getName()."</p>";
                 echo "<h4 class='list-group-item-heading'>Telefone</h4>";
@@ -79,8 +80,9 @@
                 echo "<li><b>Bairro</b></li><li>".$contact->getDistrict()."</li>";
                 echo "</ul>";
                 echo "<button type='button' class='btn btn-info'>editar</button>";
-                echo  "<button type='button' class='btn btn-danger'>remover</button>";
-                echo "</a>";
+                echo  "<button type='submit' class='btn btn-danger'>remover</button>";
+                echo "</div>";
+                echo "</form>";
               }
             ?>
           </div>

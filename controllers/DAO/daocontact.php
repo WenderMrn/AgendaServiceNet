@@ -37,7 +37,7 @@ abstract class  DAOContact implements IDAO{
 		  return $p_sql->execute();      
 
 		} catch (Exception $e) {
-		  print $e->getMessage();
+		  throw $e->getMessage();
 		}
 	}
 	public function read($chave){
@@ -58,7 +58,7 @@ abstract class  DAOContact implements IDAO{
 		      	 	return null;
 		         
 		} catch (Exception $e) {
-		   print $e->getMessage();
+		   throw $e->getMessage();
 		}
 	}
 	public function readAll(){
@@ -71,7 +71,7 @@ abstract class  DAOContact implements IDAO{
 		        return $p_sql->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Contact");
 		         
 		} catch (Exception $e) {
-		   print $e->getMessage();
+		   throw $e->getMessage();
 		}
 	}
 	public function update($obj){
@@ -104,18 +104,18 @@ abstract class  DAOContact implements IDAO{
 		   print $e->getMessage();
 		}		
 	}
-	public function delete($obj) {
+	public function delete($key) {
 		try {
 
-		    $sql = "DELETE FROM contact WHERE name =:name";
+		    $sql = "DELETE FROM contact WHERE id =:id";
 		   
 		    $p_sql = Conection::getInstance()->prepare($sql);
-		    $p_sql->bindValue(":name",$obj->getName());
+		    $p_sql->bindValue(":id",$key);
 		   	
 		   	return $p_sql->execute();
    
 		} catch (Exception $e) {
-		  print $e->getMessage();
+		  throw $e->getMessage();
 		}
 	}
 }

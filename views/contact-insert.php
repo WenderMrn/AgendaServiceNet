@@ -34,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.php" id="home">
+          <a class="navbar-brand" href="index.php" id="home">
             <!--<img alt="Home" src="#">-->
             Agenda
           </a>
@@ -43,14 +43,7 @@
        		<ul class="nav navbar-nav">
             <li><a href="contact-list.php">Meus contatos</a></li>
 		        <li class="active"><a href="contact-insert.php">Adicionar Contato</a></li>
-		        <li><a href="#">Editar</a></li>
 		     </ul>
-			<form class="navbar-form navbar-right" role="search">
-			  <div class="form-group">
-			    <input type="text" class="form-control" placeholder="Search">
-			  </div>
-			  <button type="submit" class="btn btn-default">Submit</button>
-			</form>
        </div><!--/.nav-collapse -->
       </div>
     </nav>

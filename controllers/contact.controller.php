@@ -26,9 +26,17 @@
 		}
 		break;
 		case 'list':
+			return DAOContact::realAll();
+			header("Location:../views/contact-list.php");
+		break;
+		case 'delete':
 			
-			return DAOContact::realAll($);
-				
+			if(DAOContact::delete($_POST['id'])){
+				header("Location:../views/contact-list.php");
+			}else{
+				echo "error";
+			}
+			
 		break;
 		default:
 			# code...
