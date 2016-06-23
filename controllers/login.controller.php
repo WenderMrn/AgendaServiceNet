@@ -7,6 +7,8 @@
 			if($user != null){
 				if($user->getPassword() == crypt($_POST['password'],CRYPT_SALT_LENGTH)){
 					header("Location: ../views/home.php");
+				}else{
+					header("Location: ../index.php");
 				}
 			}else{
 				header("Location: ../index.php");
