@@ -1,3 +1,9 @@
+<?php
+require_once "../config/imports.all.php";
+session_start();
+  if(!isset($_SESSION['user']))
+    header("Location:../index.php");
+?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -34,7 +40,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php" id="home">
+          <a class="navbar-brand" href="contact-list.php" id="home">
             <!--<img alt="Home" src="#">-->
             Agenda
           </a>
@@ -44,6 +50,14 @@
             <li><a href="contact-list.php">Meus contatos</a></li>
 		        <li class="active"><a href="contact-insert.php">Adicionar Contato</a></li>
 		     </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['user']->getEmail();?><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../controllers/login.controller.php?operation=logout">sair</a></li>           
+              </ul>
+            </li>
+          </ul>
        </div><!--/.nav-collapse -->
       </div>
     </nav>

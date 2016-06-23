@@ -11,7 +11,8 @@ abstract class  DAOContact implements IDAO{
 		      	number,
 		      	district,
 		      	city,
-		      	state)
+		      	state,
+		      	iduser)
 		       VALUES (
 		        null,
 		        :name,
@@ -21,7 +22,8 @@ abstract class  DAOContact implements IDAO{
 		      	:number,
 		      	:district,
 		      	:city,
-		      	:state)";
+		      	:state,
+		      	:iduser)";
 		   
 		    $p_sql = Conection::getInstance()->prepare($sql);
 		   
@@ -33,6 +35,7 @@ abstract class  DAOContact implements IDAO{
 		    $p_sql->bindValue(":district",$obj->getDistrict());
 		    $p_sql->bindValue(":city",$obj->getCity());
 		    $p_sql->bindValue(":state",$obj->getState());
+		    $p_sql->bindValue(":iduser",$obj->getIduser());
 		        
 		  return $p_sql->execute();      
 
@@ -56,6 +59,20 @@ abstract class  DAOContact implements IDAO{
 		        	return $result;
 		      	else
 		      	 	return null;
+		         
+		} catch (Exception $e) {
+		   throw $e->getMessage();
+		}
+	}
+	public function realAllByUserId($id){
+		try {
+		        $sql = "SELECT * FROM contact WHERE iduser = :id";
+		   
+		        $p_sql = Conection::getInstance()->prepare($sql);
+		        $p_sql->bindValue(":id",$id);
+		        $p_sql->execute();
+
+		        return $p_sql->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Contact");
 		         
 		} catch (Exception $e) {
 		   throw $e->getMessage();
@@ -85,10 +102,11 @@ abstract class  DAOContact implements IDAO{
 			    district = :district,
 			    city = :city,
 			    state = :state
-		     WHERE name =:name";
+		     WHERE iduser =:iduser AND id = :id";
 		   
-		    $p_sql = Conection::getInstance()->prepare($sql);
-		   
+		   $p_sql = Conection::getInstance()->prepare($sql);
+		   $p_sql->bindValue(":iduser", $obj->getIduser());
+		   $p_sql->bindValue(":id", $obj->getId());
 		   $p_sql->bindValue(":name", $obj->getName());
 		   $p_sql->bindValue(":phone", $obj->getPhone());
 		   $p_sql->bindValue(":street",$obj->getStreet());
@@ -98,10 +116,11 @@ abstract class  DAOContact implements IDAO{
 		   $p_sql->bindValue(":city",$obj->getCity());
 		   $p_sql->bindValue(":state",$obj->getState());
 		    
-		    return $p_sql->execute();
+		   
+		   return $p_sql->execute();
    
 		} catch (Exception $e) {
-		   print $e->getMessage();
+		   throw $e->getMessage();
 		}		
 	}
 	public function delete($key) {

@@ -83,3 +83,16 @@ jQuery(function($){
    $("#cep").mask("99.999-999");
    $("#ssn").mask("999-99-9999");
 });
+
+function OpenEditModal(obj){
+    document.getElementById('id').value = obj.id;
+    document.getElementById('iduser').value = obj.iduser;
+    document.getElementById('name').value = obj.name;
+    document.getElementById('phone').value = obj.phone;
+    document.getElementById('city').value = obj.city;
+    document.getElementById('cep').value = obj.CEP;
+    document.getElementById('state').value = obj.state;
+    document.getElementById('street').value = obj.street;
+    document.getElementById('district').value = obj.district;
+    document.getElementById('number').value = obj.number;
+};

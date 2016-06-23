@@ -1,7 +1,8 @@
 <?php
-class Contact{
+class Contact implements JsonSerializable{
 
     private $id;
+    private $iduser;
     private $name;
     private $phone;
 	private $street;
@@ -24,8 +25,21 @@ class Contact{
 		$this->state = $state;
 	}
 
+
+    public function getIduser(){
+       return $this->iduser; 
+    }
+
+    public function setIduser($iduser){
+       $this->iduser = $iduser; 
+    }
+
     public function getId(){
        return $this->id; 
+    }
+
+    public function setId($id){
+       $this->id = $id; 
     }
 
     public function setName($name){
@@ -91,6 +105,21 @@ class Contact{
     public function getState()
     {
         return $this->state;
+    }
+
+    public function jsonSerialize () {
+        return array(
+        'id'=> $this->id,
+        'iduser'=> $this->iduser,   
+        'name'=> $this->name,
+        'phone'=> $this->phone,
+        'street'=> $this->street,
+        'CEP'=> $this->CEP,
+        'number'=> $this->number,
+        'district'=> $this->district,
+        'city'=> $this->city,
+        'state'=> $this->state
+        );
     }
 }
 ?>
