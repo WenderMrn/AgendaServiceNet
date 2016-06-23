@@ -6,7 +6,7 @@
 			$user = DAOUser::readByEmail($_POST['email']);
 			if($user != null){
 				if($user->getPassword() == crypt($_POST['password'],CRYPT_SALT_LENGTH)){
-					header("Location: ../views/home.php");
+					header("Location: ../views/index.php");
 				}else{
 					header("Location: ../index.php");
 				}

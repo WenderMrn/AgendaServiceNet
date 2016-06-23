@@ -1,35 +1,3 @@
-<!--<!DOCTYPE html>
-<html>
-  <head>
-    <title>Agenda</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap 
-    <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="assets/css/style.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="#">Agenda</a>
-          <div class="nav-collapse in collapse" style="height: auto;">
-            <form class="navbar-form pull-right" action="controllers/login.controller.php?operation=login" method="POST">
-              <input class="span2" type="text" placeholder="Email" name="email">
-              <input class="span2" type="password" placeholder="Password" name="password">
-              <button type="submit" class="btn">Sign in</button>
-            </form>
-          </div><!--/.nav-collapse 
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      
-    </div>
-    <script src="assets/lib/jquery/dist/jquery.js"></script>
-    <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
-  </body>
-</html>-->
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -96,7 +64,7 @@
             <div class="carousel-caption">
               <h1>Nunca mais perca seus contatos</h1>
               <p>Cadastre-se e leve seus contatos para onde quiser</p>
-              <p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">reservar</a></p>
+              <p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">cadastrar</a></p>
             </div>
           </div>
         </div>
@@ -106,7 +74,7 @@
             <div class="carousel-caption">
               <h1>Maias comodidade.</h1>
               <p>Ideal para quem procura praticidade em uma agenda.</p>
-              <p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">reservar</a></p>
+              <p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">cadastrar</a></p>
             </div>
           </div>
         </div>
@@ -116,7 +84,7 @@
             <div class="carousel-caption">
               <h1>Agenda ServiceNet.</h1>
               <p>Agenda ServiceNet é uma agenda de contatos eletronica</p>
-              <p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">reservar</a></p>
+              <p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">cadastrar</a></p>
             </div>
           </div>
         </div>
