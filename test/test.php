@@ -4,7 +4,7 @@
 	//$c = new Contact("Wender","91192046",new Address());
 	//print_r($c);
 
-	if(DAOUser::create(new User("Pedro Martins","mt@gmail.com","123"))){
+	if(DAOUser::create(new User("Pedro Martins","mt@gmail.com",crypt("123",CRYPT_SALT_LENGTH)))){
 		echo "Usuário criado com sucesso!";
 	}else{
 		echo "Erro ao criar usuário!";

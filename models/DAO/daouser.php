@@ -44,7 +44,29 @@
 		      	  	return null;
 		         
 		    } catch (Exception $e) {
-		      print $e->getMessage();
+		      throw $e->getMessage();
+		    }
+		
+	}
+	public function readByEmail($chave){
+		try {
+		          $sql = "SELECT * FROM user WHERE email = :email";
+		   
+		          $p_sql = Conection::getInstance()->prepare($sql);
+		   
+		          $p_sql->bindValue(":email",$chave);
+		          $p_sql->execute();
+
+		          $p_sql->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"User");
+		          
+		          $result = $p_sql->fetch();
+		          if($result instanceof User)
+		          	return $result;
+		      	  else
+		      	  	return null;
+		         
+		    } catch (Exception $e) {
+		      throw $e->getMessage();
 		    }
 		
 	}
