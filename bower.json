@@ -1,0 +1,15 @@
+{
+  "name": "agenda",
+  "homepage": "https://github.com/WenderMrn/AgendaServiceNet",
+  "authors": [
+    "Wender Mrn <wender.mrn@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "keywords": [
+    "agenda"
+  ],
+  "directory" : "assets/lib/",
+  "license": "MIT",
+  "private": true
+}
