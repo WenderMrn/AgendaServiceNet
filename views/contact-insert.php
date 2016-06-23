@@ -41,7 +41,7 @@
         </div>
        <div class="nav-collapse in collapse" style="height: auto;">
        		<ul class="nav navbar-nav">
-            <li><a href="#">Meus contatos</a></li>
+            <li><a href="contact-list.php">Meus contatos</a></li>
 		        <li class="active"><a href="contact-insert.php">Adicionar Contato</a></li>
 		        <li><a href="#">Editar</a></li>
 		     </ul>

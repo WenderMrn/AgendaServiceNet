@@ -57,7 +57,18 @@
     <div class="container">
       <div class="row">
       	<div class="col-md-6 col-md-offset-3">
-      		
+          <div class="list-group">
+      		  <?php
+              require_once "../config/imports.all.php";
+              $contacts = DAOContact::readAll();
+              foreach ($contacts as $contact) {
+                echo "<a href='#' class='list-group-item'>";
+                echo "<h4 class='list-group-item-heading'>Nome</h4>";
+                echo "<p class='list-group-item-text'>".$contact->getName()."</p>";
+                echo "</a>";
+              }
+            ?>
+          </div>
 	  	</div>
 	  </div>
     </div> 

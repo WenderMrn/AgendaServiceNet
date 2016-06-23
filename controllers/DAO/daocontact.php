@@ -61,6 +61,19 @@ abstract class  DAOContact implements IDAO{
 		   print $e->getMessage();
 		}
 	}
+	public function readAll(){
+		try {
+		        $sql = "SELECT * FROM contact";
+		   
+		        $p_sql = Conection::getInstance()->prepare($sql);
+		        $p_sql->execute();
+
+		        return $p_sql->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Contact");
+		         
+		} catch (Exception $e) {
+		   print $e->getMessage();
+		}
+	}
 	public function update($obj){
 		try {
 		    $sql = "UPDATE contact set 
