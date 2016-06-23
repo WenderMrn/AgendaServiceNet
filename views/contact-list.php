@@ -54,7 +54,9 @@ session_start();
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['user']->getEmail();?><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="../controllers/login.controller.php?operation=logout">sair</a></li>           
+            <li><b class="col-md-10"><?php echo $_SESSION['user']->getName();?></b></li>
+            <li role="separator" class="divider"></li> 
+            <li><a href="../controllers/login.controller.php?operation=logout">sair</a></li>                   
           </ul>
         </li>
       </ul>
