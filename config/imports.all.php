@@ -1,4 +1,6 @@
 <?php
+	/* import configurations database */
+	require_once "dbconfig.php";
 	/* import conection class*/
 	require_once "../controllers/conection/conection.class.php";
 	/* import DAOS */
