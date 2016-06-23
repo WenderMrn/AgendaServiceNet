@@ -4,7 +4,7 @@
 	/* import conection class*/
 	require_once "../controllers/conection/conection.class.php";
 	/* import DAOS */
-	require_once "../models/DAO/DAO.interface.php";
+	require_once "../controllers/DAO/DAO.interface.php";
 	require_once "../controllers/DAO/daocontact.php";
 	require_once "../controllers/DAO/daouser.php";
 	/* Models class */

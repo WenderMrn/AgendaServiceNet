@@ -25,7 +25,7 @@ class Contact{
 	}
 
     public function setName($name){
-        $this->name;
+        $this->name = $name;
     }
 
     public function getName(){
@@ -33,7 +33,7 @@ class Contact{
     }
 
     public function setPhone($phone){
-        $this->phone;
+        $this->phone = $phone;
     }
    
     public function getPhone(){

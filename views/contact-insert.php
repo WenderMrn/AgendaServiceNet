@@ -55,7 +55,7 @@
       <div class="row">
       	<div class="col-md-6 col-md-offset-3">
       		<h2>Adicionar novo contato</h2>
-	   		<form>
+	   		<form action="../controllers/contact.controller.php?operation=create" method="POST">
         <div class="form-group">
           <label for="name">Nome</label>
           <input type="text" class="form-control" id="name" placeholder="Nome" name="name">
@@ -66,16 +66,16 @@
         </div>
         <div class="form-group">
           <label for="cep">CEP</label>
-          <input type="text" class="form-control" id="cep" placeholder="CEP">
+          <input type="text" class="form-control" id="cep" placeholder="CEP" name="CEP" onblur="searchCEP(this.value)">
         </div>
         <div class="row">
-          <div class="col-xs-5">
+          <div class="col-xs-10">
           <label for="city">Cidade</label>
           <input type="text" class="form-control" id="city" placeholder="Cidade" name="city">
         </div>
-        <div class="col-xs-5">
-          <label for="state">Estado</label>
-          <input type="text" class="form-control" id="state" placeholder="Estado" name="state">
+        <div class="col-xs-2">
+          <label for="state">UF</label>
+          <input type="text" class="form-control" id="state" placeholder="UF" name="state">
         </div>  
         </div>
         <div class="form-group">
