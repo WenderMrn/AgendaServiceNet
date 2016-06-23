@@ -1,16 +1,13 @@
 <?php
 	require_once "../config/imports.all.php";
 
-	//$c = new Contact("Wender","91192046",new Address());
-	//print_r($c);
-
 	if(DAOUser::create(new User("Pedro Martins","mt@gmail.com",crypt("123",CRYPT_SALT_LENGTH)))){
 		echo "Usuário criado com sucesso!";
 	}else{
 		echo "Erro ao criar usuário!";
 	}
 
-	if(DAOContact::create(new Contact("Wender","91192046","a","sds",23))){
+	if(DAOContact::create(new Contact("Wender","0000000000","a","sds",23))){
 		echo "Contato criado com sucesso!";
 	}else{
 		echo "Erro ao criar Contato!";
