@@ -14,7 +14,9 @@
 			$contact->setState($_POST['state']);
 			
 			if(DAOContact::create($contact)){
-				echo "sucesso!";
+				header("Location:../views/contact-list.php");
+			}else{
+				echo "error";
 			}
 
 		} catch (Exception $e) {

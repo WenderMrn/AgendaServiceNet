@@ -64,3 +64,22 @@ function searchCEP(valor) {
             clear_filds();
         }
 };
+function CreateOptionsState(){
+    var state_select = document.getElementById('state');
+    estados.forEach(function(state){
+            /*optionsEstados += "<option value='"+estado.sigla+"'>"+estado.nome+"</option>";*/
+            var option = document.createElement("option");
+            option.text = state.sigla;
+            var attr= document.createAttribute("value");
+            attr.value =state.sigla;
+            option.setAttributeNode(attr);
+            state_select.appendChild(option);
+    });
+}
+CreateOptionsState();
+jQuery(function($){
+   $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
+   $("#phone").mask("(99) 9999-9999");
+   $("#cep").mask("99.999-999");
+   $("#ssn").mask("999-99-9999");
+});

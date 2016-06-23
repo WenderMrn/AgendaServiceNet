@@ -41,8 +41,8 @@
         </div>
        <div class="nav-collapse in collapse" style="height: auto;">
        		<ul class="nav navbar-nav">
-            <li><a href="#">Meus contatos</a></li>
-		        <li class="active"><a href="contact-insert.php">Adicionar Contato</a></li>
+            <li class="active"><a href="#">Meus contatos</a></li>
+		        <li><a href="contact-insert.php">Adicionar Contato</a></li>
 		        <li><a href="#">Editar</a></li>
 		     </ul>
 			<form class="navbar-form navbar-right" role="search">
@@ -57,51 +57,7 @@
     <div class="container">
       <div class="row">
       	<div class="col-md-6 col-md-offset-3">
-      		<h2>Adicionar novo contato</h2>
-	   		<form action="../controllers/contact.controller.php?operation=create" method="POST">
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" class="form-control" id="name" placeholder="Nome" name="name">
-        </div>
-        <div class="form-group">
-          <label for="phone">Telefone</label>
-          <input type="text" class="form-control" id="phone" placeholder="Telefone" name="phone">
-        </div>
-        <div class="row">
-          <div class="col-xs-5">
-            <label for="cep">CEP</label>
-            <input type="text" class="form-control" id="cep" placeholder="CEP" name="CEP" onblur="searchCEP(this.value)">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-10">
-          <label for="city">Cidade</label>
-          <input type="text" class="form-control" id="city" placeholder="Cidade" name="city">
-        </div>
-        <div class="col-xs-2">
-          <label for="state">UF</label>
-          <select class="form-control" name="state" id="state" placeholder="UF"></select>
-        </div>  
-        </div>
-        <div class="form-group">
-          <label for="district">Bairro</label>
-          <input type="text" class="form-control" id="district" placeholder="Bairro" name="district">
-        </div>
-        <div class="row">
-          <div class="col-xs-9">
-            <label for="street">Logradouro</label>
-            <input type="text" class="form-control" id="street" placeholder="Logradoudo" name="street">
-          </div>
-          <div class="col-xs-3">
-              <label for="number">Número</label>
-              <input type="number" class="form-control" id="number" name="number">
-          </div>
-        </div>
-			  <div class="form-group">
-			    <label for="exampleInputFile"></label>
-        </div> 
-			  <button type="submit" class="btn btn-default">Adicionar</button>
-			</form>
+      		
 	  	</div>
 	  </div>
     </div> 
