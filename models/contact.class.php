@@ -24,6 +24,10 @@ class Contact{
 		$this->state = $state;
 	}
 
+    public function getId(){
+       return $this->id; 
+    }
+
     public function setName($name){
         $this->name = $name;
     }

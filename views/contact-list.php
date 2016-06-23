@@ -56,7 +56,8 @@
     </nav>
     <div class="container">
       <div class="row">
-      	<div class="col-md-6 col-md-offset-3">
+      	<div class="col-md-8 col-md-offset-2">
+         <h1>Minha lista de contatos</h1>
           <div class="list-group">
       		  <?php
               require_once "../config/imports.all.php";
@@ -65,6 +66,20 @@
                 echo "<a href='#' class='list-group-item'>";
                 echo "<h4 class='list-group-item-heading'>Nome</h4>";
                 echo "<p class='list-group-item-text'>".$contact->getName()."</p>";
+                echo "<h4 class='list-group-item-heading'>Telefone</h4>";
+                echo "<p class='list-group-item-text'>".$contact->getPhone()."</p>";
+                echo "<h4 class='list-group-item-heading'>Endereço</h4>";
+                echo "<ul class='list-inline'>";
+                echo "<li><b>CEP</b></li><li>".$contact->getCEP()."</li>";
+                echo "<li><b>Cidade</b></li><li>".$contact->getCity()."</li>";
+                echo "<li><b>UF</b></li><li>".$contact->getState()."</li>";
+                echo "</ul>";
+                echo "<ul class='list-inline'>";
+                echo "<li><b>Logradouro</b></li><li>".$contact->getStreet().", nº ".$contact->getNumber()."</li>";
+                echo "<li><b>Bairro</b></li><li>".$contact->getDistrict()."</li>";
+                echo "</ul>";
+                echo "<button type='button' class='btn btn-info'>editar</button>";
+                echo  "<button type='button' class='btn btn-danger'>remover</button>";
                 echo "</a>";
               }
             ?>
