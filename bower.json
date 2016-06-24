@@ -9,7 +9,10 @@
   "keywords": [
     "agenda"
   ],
-  "directory" : "assets/lib/",
+  "directory": "assets/lib/",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
 }
