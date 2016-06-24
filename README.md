@@ -31,4 +31,11 @@
 email: admin@gmail.com - senha: 123
 email: joao@gmail.com - senha: 123. 
 
+<<<<<<< HEAD
 ![alt tag](assets/img/examples/example1.png)
+=======
+*****************************************************************************************************
+![alt tag](assets/img/examples/example1.png)
+![alt tag](assets/img/examples/example2.png)
+![alt tag](assets/img/examples/example3.png)
+>>>>>>> 0e814286c31b5a9071fffdec4a53c7750bc615ae
