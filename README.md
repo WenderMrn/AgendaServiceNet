@@ -4,7 +4,7 @@
 
 2. Agora vamos configuar o PDO no nosso PHP. PDO ou PHP Data Objects define uma interface consistente para acesso a banco de dados em PHP, ou seja, com o PDO podemos conectar não só ao MySQL mas também a muitos outros bancos como PostgreSQL, SQLServer, Oracle e assim por diante, basta utilizarmos o driver adequado.
 
-  Habilitar o PDO
+    Habilitar o PDO
 
   Antes de começarmos a trabalhar com o PDO, é necessário habilitar o driver do PDO e o driver referente ao banco que será utilizado. Para habilitar o PDO é bem simples, vá ate o seu arquivo php.ini que encontra-se dentro do diretório onde foi instalado o PHP e remova os comentários (;) das linhas abaixo.
 
