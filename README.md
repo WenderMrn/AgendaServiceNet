@@ -35,4 +35,3 @@ email: joao@gmail.com - senha: 123.
 ![alt tag](assets/img/examples/example1.png)
 ![alt tag](assets/img/examples/example2.png)
 ![alt tag](assets/img/examples/example3.png)
-![alt tag](assets/img/examples/example4.png)
