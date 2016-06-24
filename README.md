@@ -20,6 +20,12 @@
 
 3. Abra o MySQL e execute o script sql: AgendaServiceNet/config/agendadb.sql. O script "agendadb.sql" vai criar toda a estrutura do banco de dados e vai inserir alguns dados.
 
-4. Logando na aplicação.você pode logar na aplicação com os usuários: 
+4.Agora será necessário abrir o arquivo "AgendaServiceNet/config/dbconfig.php" e informar:
+HOSTNAME: nome do servidor local.
+DBNAME: nome do banco de dados que você criou.
+DBUSER: nome do usuário do banco de dados.
+DBPASS: senha do usuário do banco de dados.
+
+5. Logando na aplicação.você pode logar na aplicação com os usuários: 
 email: admin@gmail.com - senha: 123
 email: joao@gmail.com - senha: 123. 
