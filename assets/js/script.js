@@ -1,10 +1,9 @@
 function clear_filds() {
             //Limpa valores do formulário de cep.
-            document.getElementById('rua').value=("");
-            document.getElementById('bairro').value=("");
-            document.getElementById('cidade').value=("");
-            document.getElementById('uf').value=("");
-            document.getElementById('ibge').value=("");
+            document.getElementById('street').value="";
+            document.getElementById('district').value="";
+            document.getElementById('city').value="";
+            document.getElementById('state').value="";
 }
 
 function update_inputs_form(conteudo) {
