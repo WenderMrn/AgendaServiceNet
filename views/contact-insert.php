@@ -70,7 +70,7 @@ session_start();
 	   		<form action="../controllers/contact.controller.php?operation=create" method="POST">
         <div class="form-group">
           <label for="name">Nome</label>
-          <input type="text" class="form-control" id="name" placeholder="Nome" name="name">
+          <input type="text" class="form-control" id="name" placeholder="Nome" name="name" required="">
         </div>
         <div class="form-group">
           <label for="phone">Telefone</label>
@@ -109,7 +109,7 @@ session_start();
 			  <div class="form-group">
 			    <label for="exampleInputFile"></label>
         </div> 
-			  <button type="submit" class="btn btn-default">Adicionar</button>
+			  <button type="submit" class="btn btn-primary">Adicionar</button>
 			</form>
 	  	</div>
 	  </div>
