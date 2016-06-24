@@ -38,7 +38,7 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html" id="home">
+          <a class="navbar-brand" href="index.php" id="home">
             <!--<img alt="Home" src="#">-->
             Agenda
           </a>
@@ -49,7 +49,7 @@ session_start();
               <input class="form-control" type="text" placeholder="Email" name="email">
               <input class="form-control" type="password" placeholder="Password" name="password">
               </div>
-              <button type="submit" class="btn">Sign in</button>
+              <button type="submit" class="btn">logar</button>
             </form>
         </div><!--/.nav-collapse -->
       </div>
@@ -76,7 +76,7 @@ session_start();
             <div class="carousel-caption">
               <h1>Nunca mais perca seus contatos</h1>
               <p>Cadastre-se e leve seus contatos para onde quiser</p>
-              <p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">cadastrar</a></p>
+              <!--<p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">cadastrar</a></p>-->
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ session_start();
             <div class="carousel-caption">
               <h1>Maias comodidade.</h1>
               <p>Ideal para quem procura praticidade em uma agenda.</p>
-              <p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">cadastrar</a></p>
+              <!--<p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">cadastrar</a></p>-->
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ session_start();
             <div class="carousel-caption">
               <h1>Agenda ServiceNet.</h1>
               <p>Agenda ServiceNet é uma agenda de contatos eletronica</p>
-              <p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">cadastrar</a></p>
+              <!--<p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">cadastrar</a></p>-->
             </div>
           </div>
         </div>
