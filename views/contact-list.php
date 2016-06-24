@@ -62,9 +62,8 @@ session_start();
       </ul>
   			<form class="navbar-form navbar-right" role="search">
   			  <div class="form-group">
-  			    <input type="text" class="form-control" placeholder="buscar">
+  			    <input type="text" class="form-control" placeholder="buscar" onkeyup="filterContact(this)">
   			  </div>
-  			  <button type="submit" class="btn btn-default">buscar</button>
   			</form>
        </div><!--/.nav-collapse -->
       </div>
@@ -83,7 +82,7 @@ session_start();
                   echo "<input type='hidden' value=".$contact->getId()." name='id'>";
                   echo "<div class='list-group-item'>";
                   echo "<h4 class='list-group-item-heading'>Nome</h4>";
-                  echo "<p class='list-group-item-text'>".$contact->getName()."</p>";
+                  echo "<p class='list-group-item-text contact-name'>".$contact->getName()."</p>";
                   echo "<h4 class='list-group-item-heading'>Telefone</h4>";
                   echo "<p class='list-group-item-text'>".$contact->getPhone()."</p>";
                   echo "<h4 class='list-group-item-heading'>Endereço</h4>";

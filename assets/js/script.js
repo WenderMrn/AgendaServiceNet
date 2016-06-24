@@ -96,4 +96,15 @@ function OpenEditModal(obj){
     document.getElementById('district').value = obj.district;
     document.getElementById('number').value = obj.number;
 };
-$().alert();
+function filterContact(input){
+  var chave = input.value;
+  var contacts = $(".contact-name");
+  
+  for (var val of contacts) {
+    if(val.innerHTML.toLowerCase().indexOf(chave.toLowerCase()) < 0){
+        $(val.parentNode).hide();
+    }else{
+        $(val.parentNode).show();
+    }
+  }
+}
