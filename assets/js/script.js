@@ -96,3 +96,4 @@ function OpenEditModal(obj){
     document.getElementById('district').value = obj.district;
     document.getElementById('number').value = obj.number;
 };
+$().alert();

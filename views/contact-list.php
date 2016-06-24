@@ -62,9 +62,9 @@ session_start();
       </ul>
   			<form class="navbar-form navbar-right" role="search">
   			  <div class="form-group">
-  			    <input type="text" class="form-control" placeholder="Search">
+  			    <input type="text" class="form-control" placeholder="buscar">
   			  </div>
-  			  <button type="submit" class="btn btn-default">Submit</button>
+  			  <button type="submit" class="btn btn-default">buscar</button>
   			</form>
        </div><!--/.nav-collapse -->
       </div>
@@ -76,7 +76,7 @@ session_start();
           <div class="list-group">
       		  <?php
               require_once "../config/imports.all.php";
-              $contacts = DAOContact::readAll();
+              $contacts = DAOContact::realAllByUserId($_SESSION['user']->getId());
               if(count($contacts) > 0){
                 foreach ($contacts as $contact) {
                   echo "<form action='../controllers/contact.controller.php?operation=delete' method='POST'>";

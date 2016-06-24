@@ -12,10 +12,10 @@
 							print_r($_SESSION['user']);
 							header("Location: ../views/contact-list.php");
 						}else{
-							header("Location: ../index.php");
+							header("Location: ../index.php?alert=invalid_password");
 						}
 					}else{
-						header("Location: ../index.php");
+						header("Location: ../index.php?alert=invalid_password");
 					}
 				} catch (Exception $e) {
 					echo $e.getMessage();

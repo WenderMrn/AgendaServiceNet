@@ -1,3 +1,9 @@
+<?php
+require_once "models/contact.class.php";
+session_start();
+  if(isset($_SESSION['user']))
+    header("Location:views/contact-list.php");
+?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -48,6 +54,12 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+    <?php
+      if(isset($_GET['alert']))
+        if($_GET['alert'] == "invalid_password"){
+          require_once "views/alert.html";  
+        } 
+    ?>
      <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
