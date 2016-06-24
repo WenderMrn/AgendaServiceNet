@@ -84,7 +84,7 @@ session_start();
           <img class="second-slide" src="assets/img/slide/2.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Maias comodidade.</h1>
+              <h1>Maior comodidade.</h1>
               <p>Ideal para quem procura praticidade em uma agenda.</p>
               <!--<p><a class="btn btn-lg btn-primary" href="pages/reserva.html" role="button">cadastrar</a></p>-->
             </div>
