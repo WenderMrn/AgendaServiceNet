@@ -46,7 +46,7 @@ session_start();
        <div class="nav-collapse in collapse" style="height: auto;">
             <form class="navbar-form navbar-right" action="controllers/login.controller.php?operation=login" method="POST">
               <div class="form-group">
-              <input class="form-control" type="text" placeholder="Email" name="email">
+              <input class="form-control" type="email" placeholder="Email" name="email">
               <input class="form-control" type="password" placeholder="Password" name="password">
               </div>
               <button type="submit" class="btn">logar</button>
