@@ -26,6 +26,7 @@
  - DBUSER: nome do usuário do banco de dados.
  - DBPASS: senha do usuário do banco de dados.
 
-5. Logando na aplicação.você pode logar na aplicação com os usuários: 
--email: admin@gmail.com - senha: 123
--email: joao@gmail.com - senha: 123. 
+5. Logando na aplicação.você pode logar na aplicação com os usuários:
+
+email: admin@gmail.com - senha: 123
+email: joao@gmail.com - senha: 123. 
