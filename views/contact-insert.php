@@ -83,11 +83,11 @@ session_start();
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-10">
+          <div class="col-xs-9">
           <label for="city">Cidade</label>
           <input type="text" class="form-control" id="city" placeholder="Cidade" name="city">
         </div>
-        <div class="col-xs-2">
+        <div class="col-xs-3">
           <label for="state">UF</label>
           <select class="form-control" name="state" id="state" placeholder="UF"></select>
         </div>  

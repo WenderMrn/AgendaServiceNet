@@ -1,6 +1,6 @@
 <?php
 class DAOContact implements IDAO{
-	public static function create($obj){
+	public function create($obj){
 		try {
 		    $sql = "INSERT INTO contact(
 		      	id,  
@@ -43,7 +43,7 @@ class DAOContact implements IDAO{
 		  throw $e->getMessage();
 		}
 	}
-	public static function read($chave){
+	public function read($chave){
 		try {
 		        $sql = "SELECT * FROM contact WHERE name = :name";
 		   
@@ -64,7 +64,7 @@ class DAOContact implements IDAO{
 		   throw $e->getMessage();
 		}
 	}
-	public static function readAllByUserId($id){
+	public function readAllByUserId($id){
 		try {
 		        $sql = "SELECT * FROM contact WHERE iduser = :id";
 		   
@@ -78,7 +78,7 @@ class DAOContact implements IDAO{
 		   throw $e->getMessage();
 		}
 	}
-	public static function  readAll(){
+	public function  readAll(){
 		try {
 		        $sql = "SELECT * FROM contact";
 		   
@@ -91,7 +91,7 @@ class DAOContact implements IDAO{
 		   throw $e->getMessage();
 		}
 	}
-	public static function  update($obj){
+	public function  update($obj){
 		try {
 		    $sql = "UPDATE contact set 
 			    name = :name,
@@ -123,7 +123,7 @@ class DAOContact implements IDAO{
 		   throw $e->getMessage();
 		}		
 	}
-	public function static delete($key) {
+	public function delete($key) {
 		try {
 
 		    $sql = "DELETE FROM contact WHERE id =:id";

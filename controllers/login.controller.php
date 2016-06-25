@@ -5,7 +5,8 @@
 		switch ($_GET['operation']) {
 			case 'login':
 				try {
-					$user = DAOUser::readByEmail($_POST['email']);
+					$daouser = new DAOUser();
+					$user = $daouser->readByEmail($_POST['email']);
 					if($user != null){
 						if($user->getPassword() == crypt($_POST['password'],CRYPT_SALT_LENGTH)){
 							$_SESSION['user'] = $user;

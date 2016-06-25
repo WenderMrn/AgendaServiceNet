@@ -74,7 +74,8 @@ session_start();
          <h1>Minha lista de contatos</h1>
           <div class="list-group">
       		  <?php
-              $contacts = DAOContact::readAllByUserId($_SESSION['user']->getId());
+              $daocontact = new DAOContact(); 
+              $contacts = $daocontact->readAllByUserId($_SESSION['user']->getId());
               if(count($contacts) > 0){
                 foreach ($contacts as $contact) {
                   echo "<form action='../controllers/contact.controller.php?operation=delete' method='POST'>";

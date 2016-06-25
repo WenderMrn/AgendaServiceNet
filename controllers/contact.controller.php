@@ -16,7 +16,8 @@
 				$contact->setState($_POST['state']);
 				$contact->setIduser($_SESSION['user']->getId());
 
-			if(DAOContact::create($contact)){
+			$daocontact = new DAOContact(); 		
+			if($daocontact->create($contact)){
 				header("Location:../views/contact-list.php");
 			}else{
 				echo "error";
@@ -27,7 +28,8 @@
 		}
 		break;
 		case 'list':
-			DAOContact::realAllByUserId($_SESSION['user']->getId());
+			$daocontact = new DAOContact(); 
+			$daocontact->realAllByUserId($_SESSION['user']->getId());
 			header("Location:../views/contact-list.php");
 		break;
 		case 'update':
@@ -43,8 +45,9 @@
 				$contact->setState($_POST['state']);
 				$contact->setIduser($_POST['iduser']);
 				$contact->setId($_POST['id']);
-				
-				if(DAOContact::update($contact))
+
+				$daocontact = new DAOContact(); 
+				if($daocontact->update($contact))
 					header("Location:../views/contact-list.php");
 				else
 					echo "error";		
@@ -54,8 +57,8 @@
 			
 		break;
 		case 'delete':
-			
-			if(DAOContact::delete($_POST['id'])){
+			$daocontact = new DAOContact();
+			if($daocontact->delete($_POST['id'])){
 				header("Location:../views/contact-list.php");
 			}else{
 				echo "error";

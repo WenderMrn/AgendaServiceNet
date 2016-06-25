@@ -1,6 +1,6 @@
 <?php
 class DAOUser implements IDAO{
- 	public static function create($obj){
+ 	public function create($obj){
 		try {
 		          $sql = "INSERT INTO user(
 		          	  id,  
@@ -26,7 +26,7 @@ class DAOUser implements IDAO{
 		      print $e->getMessage();
 		    }
 	}
-	public static function read($chave){
+	public function read($chave){
 		try {
 		          $sql = "SELECT * FROM user WHERE name = :name";
 		   
@@ -48,7 +48,7 @@ class DAOUser implements IDAO{
 		    }
 		
 	}
-	public static function readByEmail($chave){
+	public function readByEmail($chave){
 		try {
 		          $sql = "SELECT * FROM user WHERE email = :email";
 		   
@@ -70,7 +70,7 @@ class DAOUser implements IDAO{
 		    }
 		
 	}
-	public static function update($obj){
+	public function update($obj){
 		try {
 		    $sql = "UPDATE user set address = :address,email = :email,password = :password WHERE name =:name";
 		   
@@ -87,7 +87,7 @@ class DAOUser implements IDAO{
 		   print $e->getMessage();
 		}
 	}
-	public static function delete($obj) {
+	public function delete($obj) {
 		try {
 
 		    $sql = "DELETE FROM user WHERE name =:name";
