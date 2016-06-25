@@ -97,13 +97,13 @@ session_start();
           <input type="text" class="form-control" id="district" placeholder="Bairro" name="district">
         </div>
         <div class="row">
-          <div class="col-xs-9">
+          <div class="col-xs-8">
             <label for="street">Logradouro</label>
             <input type="text" class="form-control" id="street" placeholder="Logradoudo" name="street">
           </div>
-          <div class="col-xs-3">
+          <div class="col-xs-4">
               <label for="number">Número</label>
-              <input type="number" class="form-control" id="number" name="number">
+              <input type="number" class="form-control" id="number" name="number" min="0">
           </div>
         </div>
 			  <div class="form-group">
