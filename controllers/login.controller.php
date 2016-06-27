@@ -23,7 +23,9 @@
 				}
 			break;
 			case 'logout';
-				session_destroy();
+				if(isset($_SESSION['user'])){
+					session_unset($_SESSION['user']); 
+				}
 				header("Location:../index.php");
 			break;
 		}
